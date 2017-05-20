@@ -1,4 +1,4 @@
-package org.osori.androidstudy.activities;
+package org.osori.androidstudy.week1;
 
 import android.app.Activity;
 import android.app.Dialog;

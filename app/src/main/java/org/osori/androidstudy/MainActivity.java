@@ -1,13 +1,12 @@
-package org.osori.androidstudy.activities;
+package org.osori.androidstudy;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 
 import org.osori.androidstudy.R;
-import org.osori.androidstudy.adapters.StudyListAdapter;
+import org.osori.androidstudy.StudyListAdapter;
 
 public class MainActivity extends AppCompatActivity {
 

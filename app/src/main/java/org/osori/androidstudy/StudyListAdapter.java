@@ -1,4 +1,4 @@
-package org.osori.androidstudy.adapters;
+package org.osori.androidstudy;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.osori.androidstudy.R;
-import org.osori.androidstudy.activities.CustomDialogActivity;
-import org.osori.androidstudy.activities.ViewPagerActivity;
+import org.osori.androidstudy.week1.CustomDialogActivity;
+import org.osori.androidstudy.week2.ViewPagerActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
