@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import org.osori.androidstudy.week1.CustomDialogActivity;
 import org.osori.androidstudy.week2.ViewPagerActivity;
+import org.osori.androidstudy.week3.CatActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,6 +32,7 @@ public class StudyListAdapter extends RecyclerView.Adapter<StudyListAdapter.Stud
     private Class[] studyArray = {
             CustomDialogActivity.class,
             ViewPagerActivity.class,
+            CatActivity.class,
     };
 
     public StudyListAdapter(Context context) {
