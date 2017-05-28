@@ -19,6 +19,7 @@ import org.osori.androidstudy.R;
 
 public class CatActivity extends AppCompatActivity implements CatContract.View {
 
+    // control 할 view 들을 class 변수로 정의한다.
     TextView catName;
     TextView catHpText;
     ProgressBar catHpBar;
@@ -26,6 +27,7 @@ public class CatActivity extends AppCompatActivity implements CatContract.View {
     Button catFeedButton;
     Button catWalkButton;
 
+    // user 의 action 을 control 할 presenter 선언
     CatPresenter catPresenter;
 
     private final String CAT_NAME = "clucle";
@@ -33,8 +35,10 @@ public class CatActivity extends AppCompatActivity implements CatContract.View {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // layout 에 정의 해놓은 view 를 그려준다.
         setContentView(R.layout.activity_cat);
 
+        // xml 의 view 와 view 객체를 binding 해준다.
         catName = (TextView) findViewById(R.id.cat_name);
         catHpText = (TextView) findViewById(R.id.cat_hp_text);
         catHpBar = (ProgressBar) findViewById(R.id.cat_hp_bar);
@@ -42,10 +46,16 @@ public class CatActivity extends AppCompatActivity implements CatContract.View {
         catFeedButton = (Button) findViewById(R.id.cat_feed_button);
         catWalkButton = (Button) findViewById(R.id.cat_walk_button);
 
+        // Presenter 초기화.. 인자로 들어간 값은 CatContract.View interface 이며
+        // CatActivity 는 View 를 상속 받고 있다.
         catPresenter = new CatPresenter(this);
 
+        // 처음에 시작했을 때 init notify 를 주고 싶어서 initCat() 을 만들었다. .. 사용함 ㅇㅇ
         catPresenter.initCat(CAT_NAME);
 
+        // Button click event 에 대해 정의함
+        // 1) 밥먹이기 버튼 누르면 밥먹게하고
+        // 2) 걷기 버튼 누르면 걷게함
         catFeedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +69,13 @@ public class CatActivity extends AppCompatActivity implements CatContract.View {
             }
         });
     }
+
+    /**
+     * 아래 있는 code 들은 모두 view 를 control 하는 코드 들이다.
+     *
+     * CatContract 에서 일어날 수 있는 모든 view 의 동작에 대해 명시 해 놓았다.
+     * 그 내용을 실제 View class 를 implement 한 CatActivity 에서 구현함
+     */
 
     @Override
     public void setCatName(String name) {

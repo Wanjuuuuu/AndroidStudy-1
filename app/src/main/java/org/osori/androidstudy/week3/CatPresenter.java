@@ -6,10 +6,16 @@ package org.osori.androidstudy.week3;
 
 public class CatPresenter implements CatContract.Presenter {
 
+    /**
+     * Presenter 는 실제 entity 와 control 할 view 를 가지고 있다.
+     */
+
     private Cat cat;
     private CatContract.View view;
 
+    // 먹이주면 hp 몇 올라갈지 ㅇㅇ
     private static final int FEED_POINT = 10;
+    // 걸으면 hp 몇 떨어질지 ㅇㅇ
     private static final int WALK_POINT = 15;
 
     public CatPresenter(CatContract.View view) {
