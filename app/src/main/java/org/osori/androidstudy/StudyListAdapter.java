@@ -12,6 +12,9 @@ import android.widget.TextView;
 import org.osori.androidstudy.week1.CustomDialogActivity;
 import org.osori.androidstudy.week2.ViewPagerActivity;
 import org.osori.androidstudy.week3.CatActivity;
+import org.osori.androidstudy.week4.ConstraintLayoutActivity;
+import org.osori.androidstudy.week5.FloatingViewService;
+import org.osori.androidstudy.week5.FloatingViewServiceActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,6 +36,8 @@ public class StudyListAdapter extends RecyclerView.Adapter<StudyListAdapter.Stud
             CustomDialogActivity.class,
             ViewPagerActivity.class,
             CatActivity.class,
+            ConstraintLayoutActivity.class,
+            FloatingViewServiceActivity.class,
     };
 
     public StudyListAdapter(Context context) {
