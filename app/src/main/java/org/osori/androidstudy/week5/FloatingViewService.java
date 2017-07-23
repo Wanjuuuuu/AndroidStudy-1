@@ -64,12 +64,14 @@ public class FloatingViewService extends Service {
                         initialTouchY=event.getRawY();
                         return true;
 
-                    case  MotionEvent.ACTION_MOVE:
-
+                    case MotionEvent.ACTION_MOVE:
                         params.x=initialX+(int)(event.getRawX()-initialTouchX);
                         params.y=initialY+(int)(event.getRawY()-initialTouchY);
-
                         mWindowManager.updateViewLayout(mFloatingView,params);
+                        return true;
+
+                    case MotionEvent.EDGE_RIGHT:
+                        stopSelf();
                         return true;
                 }
                 return false;

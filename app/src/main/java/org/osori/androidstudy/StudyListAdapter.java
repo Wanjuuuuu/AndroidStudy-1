@@ -15,6 +15,7 @@ import org.osori.androidstudy.week3.CatActivity;
 import org.osori.androidstudy.week4.ConstraintLayoutActivity;
 import org.osori.androidstudy.week5.FloatingViewService;
 import org.osori.androidstudy.week5.FloatingViewServiceActivity;
+import org.osori.androidstudy.week6.GalleryActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,6 +39,7 @@ public class StudyListAdapter extends RecyclerView.Adapter<StudyListAdapter.Stud
             CatActivity.class,
             ConstraintLayoutActivity.class,
             FloatingViewServiceActivity.class,
+            GalleryActivity.class,
     };
 
     public StudyListAdapter(Context context) {

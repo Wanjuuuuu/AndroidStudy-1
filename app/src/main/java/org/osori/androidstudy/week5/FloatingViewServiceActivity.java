@@ -35,16 +35,15 @@ public class FloatingViewServiceActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) { // from startActivityForResult
         if(requestCode==CODE_DRAW_OVER_OTHER_APP_PERMISSION){
-            initializeView();
-//            if(resultCode==RESULT_OK){
-//                initializeView();
-//            }
-//            else{
-//                Toast.makeText(this,"Permission is denied",Toast.LENGTH_SHORT).show();
-//                finish();
-//            }
+            if(resultCode==RESULT_OK){
+                initializeView();
+            }
+            else{
+                Toast.makeText(this,"Permission is denied",Toast.LENGTH_SHORT).show();
+                finish();
+            }
         }
     }
 
